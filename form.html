@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 align="center">Contact Us</h2>
+    <hr>
+    <form>
+    <label for="uname">Enter your Name:</label>
+    <input type="text" name="username">
+    <br><br>
+    <label for="uage">Enter your Age:</label>
+    <input type="number" name="userage">
+    <br><br>
+     <label for="age" id="usergender">Select your Gender:</label><br>
+    <input type="radio" name="usergender" value="Male">
+    <label for="male">Male</label><br>
+
+    <input type="radio" name="usergender" value="Female">
+    <label for="female">Female</label><br>
+
+    <input type="radio" name="usergender" value="Others">
+    <label for="others">Others</label><br>
+
+
+    <br>
+    <label for="uage">Enter your Qualification:</label>
+    <select id="userqualification" name="userqualification">
+         <option value="" selected disabled>--Please choose an option--</option>
+        <option  value="School Level">School Level</option>
+        <option  value="Intermediate">Intermediate</option>
+        <option  value="Graduate">Graduate</option>
+        <option  value="Post Graduate">Post Graduate</option>
+        <option  value="Phd">Phd</option>
+    </select>
+    <br><br>
+     
+    <label for="interest" id="userinterest">Area of Interest</label><br>
+    <input type="radio" name="userinterest" value="Frontend Developer">
+    <label for="frontenddeveloper">Frontend Developer </label><br>
+
+    <input type="radio" name="userinterest" value="backend Developer">
+    <label for="backenddeveloper">Backend Developer </label><br>
+
+    <input type="radio" name="userinterest" value="Full Stack Developer">
+    <label for="fullstackdeveloper">Full Stack Developer </label><br>
+
+    <input type="radio" name="userinterest" value="Coding">
+    <label for="coding">Coding</label><br>
+    <br>
+
+    <label for="phone">Enter you Contact No:</label><br>
+    <input type="tel" name="usercontact">
+
+    <br><br>
+    <label for="userreview">Please Enter your Review</label><br>
+    <textarea 
+    id="userreview" 
+    name="userreview"
+    rows="6"
+    placeholder="Enter you review here....">
+
+    </textarea>
+    
+    
+    <hr>
+
+    <input type="submit">
+    </form>
+    
+    
+</body>
+</html>
