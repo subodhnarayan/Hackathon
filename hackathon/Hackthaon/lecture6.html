@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 6: Media, Multi-Page Sites, & Deployment</title>
+</head>
+<body>
+
+    <!-- ======== HEADER ======== -->
+    <header>
+        <h1 align="center">Full Stack Development Course Notes</h1>
+        <p align="center"><a href="index.html">Back to Home</a></p>
+        <hr>
+    </header>
+
+    <!-- ======== LECTURE CONTENT ======== -->
+    <main>
+        <h2>Lecture 6: Deploy Your First Project | Media Tag | Multi Page Website</h2>
+        
+        <h3>Lecture Video</h3>
+        <iframe width="560" height="315" 
+                src="https://www.youtube-nocookie.com/embed/NGYp1zCBthk?si=v6AQ2u2-Y0RRTjpk" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen></iframe>
+        <hr>
+
+        <h3>Key Concepts from this Lecture</h3>
+        <ul>
+            <li><strong>HTML Media Tags:</strong> HTML5 introduced native tags for media, eliminating the need for plugins like Flash. The primary tags are `&lt;video&gt;` for visual media and `&lt;audio&gt;` for sound.</li>
+            <li><strong>Essential Media Attributes:</strong> To make media players functional, we use boolean attributes like `controls` (to show the player interface), `autoplay` (to start playing on load, usually requires `muted`), and `loop` (to repeat the media).</li>
+            <li><strong>Multi-Page Websites:</strong> A real website isn't just one page. It's a collection of linked HTML files (e.g., `index.html`, `about.html`, `contact.html`). Consistent navigation links on each page allow users to move between them seamlessly.</li>
+            <li><strong>Deployment:</strong> This is the process of taking your website's files from your local computer and putting them on a web server so that anyone in the world can access them via a public URL. Services like Netlify, Vercel, or GitHub Pages make this process very simple.</li>
+        </ul>
+        <hr>
+
+        <h3>Detailed Notes & Examples</h3>
+
+        <h4>1. HTML Media Tags</h4>
+        <p>The `&lt;video&gt;` and `&lt;audio&gt;` tags allow you to embed media directly into your webpage without any special plugins.</p>
+        
+        <h5>Example A: Embedding a Video</h5>
+        <p>This example shows a video with controls. The `&lt;source&gt;` tag is the professional way to provide a video file, ensuring browser compatibility.</p>
+        <table width="100%" cellpadding="10"><tr valign="top"><td width="50%"><pre><code>&lt;!-- From video.html --&gt;
+&lt;h1&gt;This is our Video page&lt;/h1&gt;
+
+&lt;video autoplay controls height="400px"&gt;
+    &lt;source src="./rohit.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+</code></pre></td><td width="50%"><p><strong>Output:</strong></p><img src="day6_1.png" alt="video" width="50%"></td></tr></table>
+
+        <h5>Example B: Embedding an Audio File</h5>
+        <p>Similarly, the `&lt;audio&gt;` tag embeds a sound file with a player interface when the `controls` attribute is present.</p>
+        <table width="100%" cellpadding="10"><tr valign="top"><td width="50%"><pre><code>&lt;!-- From audio.html --&gt;
+&lt;h1&gt;This is our Audio page&lt;/h1&gt;
+&lt;audio controls&gt;
+    &lt;source src="./wavy.mp3" type="audio/mp3"&gt;
+&lt;/audio&gt;
+</code></pre></td><td width="50%"><p><strong>Output:</strong></p><img src="day6_2.png" alt="audio"></td></tr></table>
+        <hr>
+
+        <h4>2. Creating a Multi-Page Website</h4>
+        <p>A multi-page website uses a consistent header with navigation links on every page. Each link points to another HTML file in your project, creating a cohesive user experience. The example below shows the standard navigation header used across all your pages.</p>
+
+        <table width="100%" cellpadding="10"><tr valign="top"><td width="50%"><pre><code>&lt;!-- Consistent header from all pages --&gt;
+&lt;header&gt;
+    &lt;h1&gt;This is our Home Page&lt;/h1&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="index.html"&gt;HomePage&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="contact.html"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="course.html"&gt;Courses&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="about.html"&gt;About us&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+    &lt;h2&gt;This is our course selling website&lt;/h2&gt;
+    &lt;img src="courseimagelink" height="500px" alt="course"&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+    &lt;p&gt;Copyright &copy; All rights are reserved&lt;/p&gt;
+&lt;/footer&gt;
+</code></pre></td><td width="50%"><p><strong>Output:</strong></p><em><img src="day6_3.png" alt="video"></em></td></tr></table>
+    </main>
+
+    <!-- ======== FOOTER ======== -->
+    <footer>
+        <hr>
+        <h3 align="center">Copyright © 2025 by Developer | All right Reserved</h3>
+    </footer>
+
+</body>
+</html>
