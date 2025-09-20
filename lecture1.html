@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 1: Intro to Web Development</title>
+</head>
+<body>
+
+    <header>
+        <h1 align="center">Full Stack Development Course Notes</h1>
+        <p align="center"><a href="index.html">Back to Home</a></p>
+        <hr>
+    </header>
+
+    <main>
+        <h2>Lecture 1: Introduction To Web Development & Internet Working</h2>
+        
+        <h3>Lecture Video</h3>
+        <iframe width="560" height="315" 
+                src="https://www.youtube-nocookie.com/embed/1pcikNlDB-4?si=SyaTx2gfARXM1U1C" 
+                title="YouTube video player" 
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen></iframe>
+        <hr>
+
+        <h3>My Key Takeaways</h3>
+        <p>This lecture covered the fundamental building blocks of the internet. Here are my key takeaways and diagrams from the class.</p>
+        
+        <table width="100%" cellpadding="10"><tr valign="top">
+            <td width="50%">
+                <h4>Core Concepts:</h4>
+                <ul>
+                    <li>An <strong>IP (Internet Protocol) address</strong> is a temporary address your device gets when it's connected to the internet. </li>
+                    <li>Your <strong>ISP (Internet Service Provider)</strong> is who gives you this IP address.</li>
+                    <li><strong>DNS (Domain Name System)</strong> acts like a phonebook for the internet, translating domain names into IP addresses. </li>
+                    <li>An IP address is dynamic (it changes), while a <strong>MAC (Media Access Control) address</strong> is a permanent hardware address. </li>
+                    <li><strong>Port Numbers</strong> are used to identify which specific application on a device a message is for. </li>
+                </ul>
+            </td>
+            <td width="50%">
+                 <img src="day1_1.png" alt="Hand-drawn diagram of internet concepts" width="100%">
+            </td>
+        </tr></table>
+        <img src="day1_2.png" alt="Hand-drawn diagram of internet concepts" width="50%">
+        
+       
+        <table width="100%" cellpadding="10"><tr valign="top">
+            <td width="50%">
+                <h4>Address Types and Limits:</h4>
+                <ul>
+                    <li><strong>IPv4</strong> addresses are 32-bit numbers, allowing for about 4.3 billion unique devices. </li>
+                    <li><strong>IPv6</strong> was created to solve the shortage of IPv4 addresses. It uses 128-bit numbers. </li>
+                    <li>A <strong>MAC address</strong> is a 48-bit hexadecimal number. </li>
+                    <li>A <strong>Port Number</strong> is a 16-bit number, with the highest possible port being 65535. </li>
+                </ul>
+            </td>
+            <td width="50%">
+                 <img src="day1_3.png" alt="Hand-drawn diagram of internet concepts" width="70%">
+            </td>
+        </tr></table>
+
+        <table width="100%" cellpadding="10"><tr valign="top">
+            <td width="50%">
+                <h4>Important Port Numbers for Developers:</h4>
+                <ul>
+                    <li><strong>21:</strong> FTP (File Transfer Protocol) </li>
+                    <li><strong>22:</strong> SSH (Secure Shell) </li>
+                    <li><strong>25:</strong> SMTP (for sending email)</li>
+                    <li><strong>53:</strong> DNS</li>
+                    <li><strong>80:</strong> HTTP (unencrypted web) </li>
+                    <li><strong>443:</strong> HTTPS (secure web) </li>
+                </ul>
+            </td>
+            <td width="50%">
+                 <img src="day1_4.png" alt="Hand-drawn diagram of internet concepts" width="70%">
+            </td>
+        </tr></table>
+        <hr>
+
+        <h3>Official Lecture Notes (From First Principles)</h3>
+        <p>The internet can be understood by solving a series of logical problems.</p>
+        <ul>
+            <li><strong>Problem 1:</strong> Share data between two computers. <strong>Solution:</strong> A direct physical link. </li>
+            <li><strong>Problem 2:</strong> Connect many computers. <strong>Solution:</strong> A local network with a central switch. </li>
+            <li><strong>Problem 3:</strong> Connect many networks. <strong>Solution:</strong> An "internetwork" connected by routers.</li>
+            <li><strong>Problem 4:</strong> Find a specific computer. <strong>Solution:</strong> A universal IP Address for every device. </li>
+            <li><strong>Problem 5:</strong> Send data reliably. <strong>Solution:</strong> TCP/IP, a set of rules to break data into small, addressed packets. </li>
+        </ul>
+
+        <h4>Public vs. Private IP Addresses</h4>
+        <p>The reason we have two types of IPs is because the 4.3 billion addresses available with IPv4 are not enough for every device in the world.</p>
+        <ul>
+            <li>A <strong>Public IP Address</strong> is your global, unique address on the internet, assigned by your ISP. No two devices can have the same public IP at the same time. This is the address web servers use. </li>
+            <li>A <strong>Private IP Address</strong> is a local address used only within your private network (like home Wi-Fi). It only needs to be unique on that local network. Your router assigns these to your devices. </li>
+        </ul>
+
+        <h4>The DNS Process</h4>
+        <p>DNS translates human-friendly domain names (www.google.com) into computer-friendly IP addresses (142.250.72.206). The process works like this:</p>
+        <ol>
+            <li>Your computer checks its local cache (browser, OS, router) to see if it already knows the IP. </li>
+            <li>If not, it asks a <strong>Recursive Resolver</strong> (usually your ISP's server) to find the answer. </li>
+            <li>The resolver queries the global DNS hierarchy: first a <strong>Root Server</strong>, then a <strong>TLD Server</strong> (for .com), and finally the domain's <strong>Authoritative Name Server</strong>, which gives the final IP address. </li>
+        </ol>
+        <hr>
+        
+        <h3>Code Examples from this Lecture</h3>
+        <p>To find your MAC address on Windows, you can use these Command Prompt commands.</p>
+        
+        <table width="100%" cellpadding="10"><tr valign="top">
+            <td width="50%">
+                <p>To see all network configuration details:</p>
+                <pre><code>ipconfig /all</code></pre>
+            </td>
+            <td width="50%">
+                <p>To see only the MAC addresses:</p>
+                <pre><code>getmac /v</code></pre>
+            </td>
+        </tr></table>
+    </main>
+
+    <footer>
+        <hr>
+        <h3 align="center">Copyright © 2025 by Developer | All right Reserved</h3>
+    </footer>
+
+</body>
+</html>
