@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 3: Nested Lists & Tables</title>
+</head>
+<body>
+
+    <header>
+        <h1 align="center">Full Stack Development Course Notes</h1>
+        <p align="center"><a href="index.html">Back to Home</a></p>
+        <hr>
+    </header>
+
+    <main>
+        <h2>Lecture 3: HTML Nested Lists & Tables</h2>
+        
+        <h3>Lecture Video</h3>
+        <iframe width="560" height="315" 
+                src="https://www.youtube-nocookie.com/embed/AJ4E1zf5tQs?si=5oMlzxS9QvHJwZ4T" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen></iframe>
+        <hr>
+        <h3>My Key Takeaways</h3>
+<ul>
+    <li>
+        <strong>Nested Lists:</strong> A list (<code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code>) can be placed inside a list item (<code>&lt;li&gt;</code>) to create a hierarchy or outline structure.
+    </li>
+    <li>
+        <strong>Basic Table Structure:</strong> Tables are created with <code>&lt;table&gt;</code>, rows with <code>&lt;tr&gt;</code>, and data cells with <code>&lt;td&gt;</code>.
+    </li>
+    <li>
+        <strong>Semantic Table Tags:</strong> For better structure, tables can be divided into a header (<code>&lt;thead&gt;</code>), a body (<code>&lt;tbody&gt;</code>), and a footer (<code>&lt;tfoot&gt;</code>). Header cells use <code>&lt;th&gt;</code> for titles.
+    </li>
+    <li>
+        <strong>Merging Columns (colspan):</strong> The <code>colspan</code> attribute can be used on a <code>&lt;td&gt;</code> or <code>&lt;th&gt;</code> to make a single cell span across multiple columns.
+    </li>
+    <li>
+        <strong>Merging Rows (rowspan):</strong> The <code>rowspan</code> attribute allows a single cell to span the height of multiple rows.
+    </li>
+</ul>
+<hr>
+
+        <h3>Code Examples from this Lecture</h3>
+
+        <h4>1. Nested Lists</h4>
+        
+        <h5>Example A: Nested Unordered List</h5>
+        <table width="100%" cellpadding="10"><tr valign="top"><td width="50%"><pre><code>
+&lt;h1&gt;Nested unordered List&lt;/h1&gt;
+&lt;p&gt;GeeksForGeeks Course List:&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;DSA
+        &lt;ul&gt;
+            &lt;li&gt;Array&lt;/li&gt;
+            &lt;li&gt;Linked List&lt;/li&gt;
+            &lt;li&gt;Stack&lt;/li&gt;
+            &lt;li&gt;Queue&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Web technology
+        &lt;ul&gt;
+            &lt;li&gt;HTML&lt;/li&gt;
+            &lt;li&gt;CSS&lt;/li&gt;
+            &lt;li&gt;JavaScirpt&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Aptitude&lt;/li&gt;
+    &lt;li&gt;Gate&lt;/li&gt;
+    &lt;li&gt;Placement&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre></td><td width="50%"><p><strong>Output:</strong></p><img src="day3_1.png" alt="Output of Nested list" width="100%"></td></tr></table>
+        
+        <h5>Example B: Mixed Nested Lists (Country List)</h5>
+        <table width="100%" cellpadding="10"><tr valign="top"><td width="50%"><pre><code>
+            &lt;h1&gt;Country List&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;li&gt;India
+        &lt;ul&gt;
+            &lt;li&gt;Delhi
+                &lt;ol&gt;
+                    &lt;li&gt;Dwarka&lt;/li&gt;
+                    &lt;li&gt;Vikaspuri&lt;/li&gt;
+                &lt;/ol&gt;
+            &lt;/li&gt;
+            &lt;li&gt;Mumbai&lt;/li&gt;
+            &lt;li&gt;Goa&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;USA
+        &lt;ul&gt;
+            &lt;li&gt;California&lt;/li&gt;
+            &lt;li&gt;Texas
+                &lt;ol&gt;
+                    &lt;li&gt;Houston&lt;/li&gt;
+                    &lt;li&gt;Austin&lt;/li&gt;
+                    &lt;li&gt;Dallas&lt;/li&gt;
+                &lt;/ol&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;England
+        &lt;ul&gt;
+            &lt;li&gt;London&lt;/li&gt;
+            &lt;li&gt;Oval&lt;/li&gt;
+            &lt;li&gt;Yorkshire&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre></td><td width="50%"><p><strong>Output:</strong></p><img src="day3_2.png" alt="Output of Nested list" width="100%"></td></tr></table>
+        
+        <h5>Example C: Complex Nested Lists (Meal Plan)</h5>
+        <table width="100%" cellpadding="10"><tr valign="top"><td width="50%">
+            <pre>
+<code>
+&lt;h1&gt;Daily Meal Plan&lt;/h1&gt;
+
+&lt;ol&gt;
+    &lt;li&gt;
+        &lt;h2&gt;Breakfast&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Main
+                &lt;ul&gt;
+                    &lt;li&gt;Mapple&lt;/li&gt;
+                    &lt;li&gt;Freshed&lt;/li&gt;
+                    &lt;li&gt;Whiped&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;Side&lt;/li&gt;
+            &lt;li&gt;Dinner&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;h2&gt;Lunch&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Main
+                &lt;ol&gt;
+                    &lt;li&gt;Start&lt;/li&gt;
+                    &lt;li&gt;Add&lt;/li&gt;
+                    &lt;li&gt;place&lt;/li&gt;
+                    &lt;li&gt;finish&lt;/li&gt;
+                &lt;/ol&gt;
+            &lt;/li&gt;
+            &lt;li&gt;Side&lt;/li&gt;
+            &lt;li&gt;Beverage&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;h2&gt;Dinner&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Appetizer&lt;/li&gt;
+            &lt;li&gt;main
+                &lt;ol&gt;
+                    &lt;li&gt;First&lt;/li&gt;
+                    &lt;li&gt;Next&lt;/li&gt;
+                    &lt;li&gt;Finally&lt;/li&gt;
+                &lt;ol&gt;
+            &lt;/li&gt;
+            &lt;li&gt;Dessert&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ol&gt;
+</code>
+</pre>
+        </td><td width="50%"><p><strong>Output:</strong></p><img src="day3_3.png" alt="list" width="100%"></td></tr></table>
+        <hr>
+
+        <h4>2. HTML Tables</h4>
+
+        <h5>Example A: Basic Table</h5>
+        <table width="100%" cellpadding="10"><tr valign="top"><td width="50%">
+            <pre>
+<code>
+&lt;table border="1"&gt;
+&nbsp; &nbsp; &lt;tr&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;Name&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;Roles&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;Subodh&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;Frontend Developer&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;Shesank&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;Backend Developer&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;Aashish&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;Full Stack Developer&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+
+&lt;/table&gt;
+</code>
+</pre>
+</td><td width="50%"><p><strong>Output:</strong></p><img src="day3_4.png" alt="table" width="100%"></td></tr></table>
+        
+        
+        
+        <h5>Example B: Merging Columns with `colspan`</h5>
+        <table width="100%" cellpadding="10"><tr valign="top"><td width="50%"><pre><code>&lt;table border="1"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Name&lt;/th&gt;
+            &lt;th colspan="2"&gt;Contact Info&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;John Doe&lt;/td&gt;
+            &lt;td&gt;9800000000&lt;/td&gt;
+            &lt;td&gt;john@gmail.com&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre></td><td width="50%"><p><strong>Output:</strong></p><img src="day3_5.png" alt="table" width="100%"></td></tr></table>
+
+        <h5>Example C: Merging Rows with `rowspan`</h5>
+        <table width="100%" cellpadding="10"><tr valign="top"><td width="50%"><pre><code>&lt;table border="1"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Column1&lt;/th&gt;
+            &lt;th&gt;Column2&lt;/th&gt;
+            &lt;th&gt;Column3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td rowspan="2"&gt;Row1Cell1&lt;/td&gt;
+            &lt;td&gt;Row1Cell2&lt;/td&gt;
+            &lt;td&gt;Row1Cell3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Row2Cell2&lt;/td&gt;
+            &lt;td&gt;Row2Cell3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre></td><td width="50%"><p><strong>Output:</strong></p><img src="day3_6.png" alt="table" width="100%"></td></tr></table>
+
+<h5>Example D: Merging Rows and column with both `rowspan` and `colspan`</h5>
+        <table width="100%" cellpadding="10"><tr valign="top"><td width="50%">
+<pre>
+<code>
+&lt;table border="1"&gt;
+&nbsp; &nbsp; &lt;thead&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;th&gt;Level1&lt;/th&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;th&gt;Level2&lt;/th&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;th&gt;Level3&lt;/th&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;th&gt;Level4&lt;/th&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;th&gt;Level5&lt;/th&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;/thead&gt;
+
+&nbsp; &nbsp; &lt;tbody&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td rowspan="6"&gt;System&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td rowspan="4"&gt;System Apps&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;td rowspan="3"&gt;System Env&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;App test&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td rowspan="2"&gt;Foo&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;App memory&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;tr&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;App test&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td rowspan="2"&gt;bar&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;tr&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;System env2&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;App memory&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;Memory Function&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;Foo&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;tr&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td colspan="2" rowspan="2"&gt;System Memory&lt;/td&gt;
+&nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;tr&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;App test&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;bar&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;
+
+&nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &lt;/tbody&gt;
+
+&nbsp; &nbsp; 
+
+
+&lt;/table&gt;
+</code>
+</pre>
+
+</td><td width="50%"><p><strong>Output:</strong></p><img src="day3_7.png" alt="table" width="100%"></td></tr></table>
+    </main>
+
+    <footer>
+        <hr>
+        <h3 align="center">Copyright © 2025 by Developer | All right Reserved</h3>
+    </footer>
+
+</body>
+</html>
